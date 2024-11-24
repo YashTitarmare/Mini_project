@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+
+        body{
+            background-color: #252525
+            ;
+        }
+        body{
+            background-color: #252525
+            ;
+        }
+        .texth{
+            color: aliceblue;
+        }
+        .movie-list {
+            max-height: 400px;  /* Adjust height as needed */
+            overflow-y: auto;    /* Enable vertical scrolling */
+        }
+        .movie-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items at the start vertically */
+            padding: 15px; /* Add padding for better spacing */
+        }
+        .movie-actions {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            margin-left: 20px; /* Add some space between text and buttons */
+        }
+
+
+        .texth{
+            color: aliceblue;
+        }
+        .task-list {
+            max-height: 400px;  /* Adjust height as needed */
+            overflow-y: auto;    /* Enable vertical scrolling */
+        }
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items at the start vertically */
+            padding: 15px; /* Add padding for better spacing */
+        }
+        .task-actions {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            margin-left: 20px; /* Add some space between text and buttons */
+        }
+
+
+
+        .texth{
+            color: aliceblue;
+        }
+    .birthday-list {
+            max-height: 400px;  /* Adjust height as needed */
+            overflow-y: auto;    /* Enable vertical scrolling */
+        }
+        .birthday-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items at the start vertically */
+            padding: 15px; /* Add padding for better spacing */
+        }
+        .birthday-actions {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            margin-left: 20px; /* Add some space between text and buttons */
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar .nav-link {
+            color: #ddd;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar .nav-link.active,
+        .sidebar .nav-link:hover {
+            background-color: #495057;
+            color: #fff;
+        }
+
+        .content {
+            margin-left: 250px; /* Adjust to the width of the sidebar */
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991.98px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+
+        /* Navbar for mobile view */
+        .navbar-dark {
+            background-color: #343a40;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+        }
+
+        .navbar .nav-link:hover {
+            color: #adb5bd;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column flex-lg-row">
+        <!-- Sidebar -->
+        <nav class="sidebar d-none d-lg-block">
+            <h2 class="text-center">Hi,{{username}}</h2>
+            <ul class="nav flex-column mt-4">
+
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}" class="nav-link active">
+                        <i class="bi-house-door-fill me-2"></i> Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url_for('dashboard') }}" class="nav-link active">
+                        <i class="bi bi-speedometer2"></i></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('add_task') }}" class="nav-link">
+                        <i class="bi-list-task me-2"></i> Tasks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('add_birthday') }}" class="nav-link">
+                        <i class="bi-calendar-event me-2"></i> Set New Message
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('add_movie') }}" class="nav-link">
+                        <i class="bi-film me-2"></i> Movie Alerts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi-gear-fill me-2"></i> Settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Top Navbar for Mobile -->
+        <nav class="navbar navbar-expand-lg navbar-dark d-lg-none">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Hi,{{username}}</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mobileNav"
+                    aria-controls="mobileNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mobileNav">
+                    <li class="nav-item">
+                        <a href="{{ url_for('index') }}" class="nav-link active">
+                            <i class="bi-house-door-fill me-2"></i> Home
+                        </a>
+                    </li>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="{{ url_for('dashboard') }}" class="nav-link active">
+                                <i class="bi-house-door-fill me-2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('add_task') }}" class="nav-link">
+                                <i class="bi-list-task me-2"></i> Tasks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('add_birthday') }}" class="nav-link">
+                                <i class="bi-calendar-event me-2"></i> Birthdays
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('add_movie') }}" class="nav-link">
+                                <i class="bi-film me-2"></i> Movie Alerts
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bi-gear-fill me-2"></i> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-4">
+            {% block content %}{% endblock %}
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

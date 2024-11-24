@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb Clone</title>
+<link type="stylesheet" href="styple.css">
+</head> 
+<body>
+    <!-- Main Container -->
+    <main class="container-page">
+        <nav class="main-menu">
+            <img class="logotipo" src="http://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.png" alt="IMDb Logo">
+
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <i class="icon fa fa-newspaper-o"></i>
+                    <span class="title-menu">News</span>
+                    <ul class="child-body">
+                        <div class="news">
+                            <li class="post-news">
+                                <img src="https://goo.gl/wMqxsg" alt="">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <span class="date">15/08/17</span>
+                                <h3 class="title-post">Lorem ipsum dolor sit amet</h3>
+                            </li>
+                            <li class="post-news">
+                                <img src="https://goo.gl/74GmN7" alt="">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <span class="date">15/08/17</span>
+                                <h3 class="title-post">Lorem ipsum dolor sit amet</h3>
+                            </li>
+                            <li class="post-news">
+                                <img src="https://goo.gl/9uBtr1" alt="">
+                                <i class="fa fa-ellipsis-v"></i>
+                                <span class="date">15/08/17</span>
+                                <h3 class="title-post">Lorem ipsum dolor sit amet</h3>
+                            </li>
+                            <a href="#">More</a>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <i class="icon fa fa-film"></i>
+                    <span class="title-menu">Movies</span>
+                </li>
+                <li class="menu-item">
+                    <i class="icon fa fa-television"></i>
+                    <span class="title-menu">Tv Series</span>
+                </li>
+                <li class="menu-item">
+                    <i class="icon fa fa-calendar-o"></i>
+                    <span class="title-menu">Events</span>
+                </li>
+                <li class="menu-item">
+                    <i class="icon fa fa-youtube-play"></i>
+                    <span class="title-menu">Trailers</span>
+                </li>
+                <li class="menu-item">
+                    <i class="icon fa fa-list-ul"></i>
+                    <span class="title-menu">Watchlist</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Body Page -->
+        <section class="body-page">
+            <!-- Wrapper for Login -->
+            <div class="wrapper-login">
+                <div class="login-with-social col-2">
+                    <h3 class="title-box">Sign in with</h3>
+                    <ul class="list-social-logins">
+                        <li class="wrap-login-btn facebook">
+                            <i class="fa fa-facebook"></i>
+                            <span>Login with Facebook</span>
+                        </li>
+                        <li class="wrap-login-btn twitter">
+                            <i class="fa fa-twitter"></i>
+                            <span>Login with Twitter</span>
+                        </li>
+                        <li class="wrap-login-btn google">
+                            <i class="fa fa-google"></i>
+                            <span>Login with Google</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login-form col-2">
+                    <form action="">
+                        <h3 class="title-box">Fazer Login</h3>
+                        <div class="wrap-input">
+                            <label for="login">Login</label>
+                            <input type="text" class="ipt-style" placeholder="user@domain.com">
+                        </div>
+                        <div class="wrap-input">
+                            <label for="password">Password</label>
+                            <input type="password" class="ipt-style" placeholder="user pass">
+                        </div>
+                        <div class="wrap-input">
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="wrap-benefits">
+                    <h3 class="title-box">Benefits of your free IMDb account</h3>
+                    <ul class="list-benefits">
+                        <li class="benefit">
+                            <i class="fa fa-cogs"></i>
+                            <strong>Personalized Recommendations</strong>
+                            <span>Discover shows you'll love.</span>
+                        </li>
+                        <li class="benefit">
+                            <i class="fa fa-star"></i>
+                            <strong>Your Watchlist</strong>
+                            <span>Track everything you want to watch and receive e-mail when.</span>
+                        </li>
+                        <li class="benefit">
+                            <i class="fa fa-bar-chart"></i>
+                            <strong>Your Ratings</strong>
+                            <span>Rate and remember everything you've seen.</span>
+                        </li>
+                        <li class="benefit">
+                            <i class="fa fa-life-saver"></i>
+                            <strong>Contribute to IMDb</strong>
+                            <span>Add data that will be seen by millions of people and get cool badges.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cover Section -->
+            <div class="cover-page"></div>
+
+            <!-- Top Links -->
+            <div class="wrap-links-top">
+                <span class="link-menu">
+                    <i class="icon fa fa-user"></i>
+                    <a href="#" id="btn-login" class="link muted">Login</a>
+                </span>
+                <span class="link-menu">
+                    <i class="icon fa fa-search"></i>
+                    <a href="#" id="btn-search" class="link muted">Search</a>
+                </span>
+            </div>
+
+            <!-- Header Page -->
+            <header class="header-page">
+                <span class="cat-tv">Tv Series</span>
+                <h1 class="main-title">Better Call Saul</h1>
+                <ul class="wrap-infos">
+                    <li class="info-item rate">8.7</li>
+                    <li class="info-item">AMC</li>
+                    <li class="info-item">Crime, drama</li>
+                    <li class="info-item">Tv Series (2015 -)</li>
+                </ul>
+                <span class="btn-more">
+                    See more
+                    <i class="icon fa fa-angle-down"></i>
+                </span>
+            </header>
+
+            <!-- Body Page -->
+            <section class="body-page">
+                <!-- Aside Left -->
+                <div class="aside-left">
+                    <img src="https://goo.gl/fVq4Zi" class="thumb-serie" alt="thumb Better Call Saul">
+                    <p class="excerpt">The trials and tribulations of criminal lawyer, Jimmy McGill, in the time leading up to establishing his strip-mall law office in Albuquerque, New Mexico.</p>
+                    <div class="wrap-tags">
+                        <span class="btn-tag">Crime</span>
+                        <span class="btn-tag">Drama</span>
+                    </div>
+                </div>
+
+                <!-- Aside Right -->
+                <div class="aside-right">
+                    <!-- Rating Progress -->
+                    <div class="rating-progress">
+                        <span class="rate-text">8.7</span>
+                    </div>
+
+                    <!-- Menu Rating Sites -->
+                    <ul class="menu-rating-site">
+                        <li class="rate-site">
+                            <span class="rate">8.7/10 - IMDb</span>
+                            <progress class="" value="87" max="100">8.7</progress>
+                        </li>
+                        <li class="rate-site">
+                            <span class="rate">9.7/10 - Rotten Tomatoes</span>
+                            <progress class="" value="97" max="100">9.7</progress>
+                        </li>
+                        <li class="rate-site">
+                            <span class="rate">9.0/10 - tv.com</span>
+                            <progress class="" value="90" max="100">9.0</progress>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer Menu -->
+    <nav class="menu-footer">
+        <ul>
+            <li class="menu-item">Sinopse</li>
+            <li class="menu-item">Full Cast</li>
+            <li class="menu-item">Awards</li>
+            <li class="menu-item">Related</li>
+        </ul>
+    </nav>
+
+<script type="script" href="script.js">
+    
+</body>
+</html>

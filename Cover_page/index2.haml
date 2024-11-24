@@ -1,0 +1,195 @@
+%main{:class => 'container-page'}
+	%nav{:class => 'main-menu'}
+
+		%img(class="logotipo" src="http://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.png" alt="imdb logo")/
+
+		%ul{:class => 'menu-list'}
+
+			%li{:class => 'menu-item'}
+				%i{:class => 'icon fa fa-newspaper-o'}
+				%span{:class => 'title-menu'}News
+				
+				%ul{:class => 'child-body'}
+					%div{:class => 'news'}
+						%li{:class => 'post-news'}
+							%img(src="https://goo.gl/wMqxsg" alt="")/
+							
+							%i{:class => 'fa fa-ellipsis-v'}
+							
+							%span{:class => 'date'}15/08/17
+							
+							%h3{:class => 'title-post'} Lorem ipsum dolor sit amet
+						
+						%li{:class => 'post-news'}
+							%img(src="https://goo.gl/74GmN7" alt="")/
+							
+							%i{:class => 'fa fa-ellipsis-v'}
+							
+							%span{:class => 'date'}15/08/17
+							
+							%h3{:class => 'title-post'} Lorem ipsum dolor sit amet
+						
+						%li{:class => 'post-news'}
+							%img(src="https://goo.gl/9uBtr1" alt="")/
+							
+							%i{:class => 'fa fa-ellipsis-v'}
+							
+							%span{:class => 'date'}15/08/17
+							
+							%h3{:class => 'title-post'} Lorem ipsum dolor sit amet
+						
+						%a(href="#")More
+
+			%li{:class => 'menu-item'}
+				%i{:class => 'icon fa fa-film'}
+				%span{:class => 'title-menu'}Movies
+
+			%li{:class => 'menu-item'}
+				%i{:class => 'icon fa fa-television'}
+				%span{:class => 'title-menu'}Tv Series
+
+			%li{:class => 'menu-item'}
+				%i{:class => 'icon fa fa-calendar-o'}
+				%span{:class => 'title-menu'}Events
+
+			%li{:class => 'menu-item'}
+				%i{:class => 'icon fa fa-youtube-play'}
+				%span{:class => 'title-menu'}Trailers
+
+			%li{:class => 'menu-item'}
+				%i{:class => 'icon fa fa-list-ul'}
+				%span{:class => 'title-menu'}Watchlist
+		
+	-# /End 
+	-# - Main page
+	-#  - Main menu
+	-#  - - logotipo
+	-#  - - Menu list
+	-#  - - Itens do menu
+	
+	-# /Start body page
+	%section{:class => 'body-page'}
+		// # Wrapper login
+		%div{:class => 'wrapper-login'}
+			%div{:class => 'login-with-social col-2'}
+				%h3{:class => 'title-box'}Sign in with
+				%ul{:class => 'list-social-logins'}
+				
+					%li{:class => 'wrap-login-btn facebook'}
+						%i{:class => 'fa fa-facebook'}
+						%span login with facebook
+						
+					%li{:class => 'wrap-login-btn twitter'}
+						%i{:class => 'fa fa-twitter'}
+						%span login with twitter
+						
+					%li{:class => 'wrap-login-btn google'}
+						%i{:class => 'fa fa-google'}
+						%span login with google
+				
+			%div{:class => 'login-form col-2'}
+				%form(action="")
+					%h3{:class => 'title-box'}Fazer Login
+					%div{:class => 'wrap-input'}
+						%label(for="login")Login
+						%input(type="text" class="ipt-style" placeholder="user@domain.com")/
+					%div{:class => 'wrap-input'}
+						%label(for="password")Password
+						%input(type="password" class="ipt-style" placeholder="user pass")/
+						
+					%div{:class => 'wrap-input'}
+						%button Login
+						
+			%div{:class => 'wrap-benefits'}
+				%h3{:class => 'title-box'}Benefits of your free IMDb account
+				%ul{:class => 'list-benefits'}
+					%li{:class => 'benefit'}
+						%i{:class => 'fa fa-cogs'}
+						%strong Personalized Recommendations
+						%span Discover shows you'll love.
+						
+					%li{:class => 'benefit'}
+						%i{:class => 'fa fa-star'}
+						%strong Your Watchlist
+						%span Track everything you want to watch and receive e-mail when.
+							
+					%li{:class => 'benefit'}
+						%i{:class => 'fa fa-bar-chart'}
+						%strong Your Ratings
+						%span Rate and remember everything you've seen.
+							
+					%li{:class => 'benefit'}
+						%i{:class => 'fa fa-life-saver'}
+						%strong Contribute to IMDb
+						%span Add data that will be seen by millions of people and get cool badges.
+
+
+			
+		
+		// # cover
+		%div{:class => 'cover-page'}
+		
+		// # Links top
+		%div{:class => 'wrap-links-top'}
+			
+			%span{:class => 'link-menu'}
+				%i{:class => 'icon fa fa-user'}
+				%a(href="#" id="btn-login" class="link muted")Login
+				
+			%span{:class => 'link-menu'}
+				%i{:class => 'icon fa fa-search'}
+				%a(href="#" id="btn-search" class="link muted")Search
+
+		// #Header page
+		%header{:class => 'header-page'}
+			
+			%span{:class => 'cat-tv'}Tv Series
+			%h1{:class => 'main-title'}Better Call Saul
+
+			%ul{:class => 'wrap-infos'}
+				%li{:class => 'info-item rate'}8,7
+				%li{:class => 'info-item'}AMC
+				%li{:class => 'info-item'}Crime, drama
+				%li{:class => 'info-item'}Tv Series (2015 -)
+				
+			%span{:class => 'btn-more'}
+				See more
+				%i{:class => 'icon fa fa-angle-down'}
+				
+		// #body page
+		%section{:class => 'body-page'}
+			// #aside-left
+			%div{:class => 'aside-left'}
+				%img(src="https://goo.gl/fVq4Zi" class ="thumb-serie" alt="thumb better call saul")/
+				%p{:class => 'excerpt'}The trials and tribulations of criminal lawyer, Jimmy McGill, in the time leading up to establishing his strip-mall law office in Albuquerque, New Mexico.
+				%div{:class => 'wrap-tags'}
+					%span{:class => 'btn-tag'}Crime
+					%span{:class => 'btn-tag'}Drama
+					
+			// #aside-right
+			%div{:class => 'aside-right'}
+			
+				// #proggress
+				%div{:class => 'rating-progress'}
+					%span{:class => 'rate-text'}8.7
+				
+				// #menu-rating-site
+				%ul{:class => 'menu-rating-site'}
+					%li{:class => 'rate-site'}
+						%span{:class => 'rate'}8.7/10 - imdb
+						%progress{:class => '', :value => '87', :max => '100'}8.7
+						
+					%li{:class => 'rate-site'}
+						%span{:class => 'rate'}9.7/10 - Rotten Tomatoes
+						%progress{:class => '', :value => '97', :max => '100'}8.7
+							
+					%li{:class => 'rate-site'}
+						%span{:class => 'rate'}9.0/10 - tv.com
+						%progress{:class => '', :value => '90', :max => '100'}8.7
+						
+	// menu footer
+	%nav{:class => 'menu-footer'}
+		%li{:class => 'menu-item'}sinopse
+		%li{:class => 'menu-item'}full cast
+		%li{:class => 'menu-item'}awards
+		%li{:class => 'menu-item'}related

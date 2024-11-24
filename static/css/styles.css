@@ -1,0 +1,26 @@
+/* General Body Styles */
+body {
+    background-color: #0f62aa; /* Main background color */
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover; /* Cover the entire hero section */
+    background-position: center; /* Center the background image */
+    color: white; /* Ensures hero text is readable */
+}
+
+/* Card Styles */
+.card {
+    border: none; /* Clean card appearance without borders */
+}
+
+.card-header {
+    font-weight: bold; /* Bold font for card headers */
+}
+
+.shadow {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+}
+
+/* Fotter */

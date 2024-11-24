@@ -1,0 +1,547 @@
+/* Configurações do documento */
+html {
+    font-size: 62.5%;
+  }
+  
+  /* #1 - Configs */
+  /* #2 - Style of app */
+  
+  a {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  /* Tamanhos */
+  $screen-width: 100%;
+  $screen-height: 100vh;
+  $main-menu-width: 110px;
+  $page-body-width: calc(100% - 110px);
+  
+  /* Colors */
+  $menu-color: #7e7e7e;
+  $white-color: #ffffff;
+  $black-color: #000000;
+  
+  /* Transitions */
+  $trans-normal: .2s linear;
+  $trans-delay: .1s;
+  $fast-trans: .5s;
+  $ease-trans: ease;
+  
+  /* Cover page address */
+  $cover-serie: url('https://images-na.ssl-images-amazon.com/images/I/A1dF3y4zGcL._RI_.jpg');
+  
+  .container-page {
+    background: #ccc;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container-page .main-menu {
+    background: #F3F3F3;
+    width: 110px;
+    height: 100%;
+  }
+  
+  .container-page .main-menu .logotipo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  
+  .container-page .main-menu .menu-list {
+    width: 100%;
+    height: 569px;
+  }
+  
+  .container-page .main-menu .menu-list .menu-item {
+    width: 100%;
+    height: calc(100% / 6 - 10px);
+    margin: 5px auto;
+    cursor: pointer;
+    color: #7e7e7e;
+    opacity: .9;
+    transition: .2s linear;
+    transition-delay: .1s;
+  }
+  
+  .container-page .main-menu .menu-list .menu-item .child-body {
+    display: none;
+    background: #ffffff;
+    width: 320px;
+    height: calc(100vh - 150px);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 1px solid #ccc;
+    top: 80px;
+    left: 110px;
+    position: fixed;
+  }
+  
+  .container-page .main-menu .menu-list .menu-item:hover {
+    transition: .2s linear;
+    transition-delay: .1s;
+    color: #EDC612;
+    opacity: 1;
+  }
+  
+  .container-page .main-menu .menu-list .menu-item .icon {
+    width: 100%;
+    height: 40%;
+    font-size: 2.4em;
+    text-align: center;
+  }
+  
+  .container-page .main-menu .menu-list .menu-item .title-menu {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+    text-transform: lowercase;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .body-page {
+    width: calc(100% - 110px);
+    height: 100%;
+    position: relative;
+    perspective: 1200px;
+  }
+  
+  .body-page .wrapper-login {
+    background: #fff;
+    width: 360px;
+    height: 300px;
+    top: 70px;
+    right: 150px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    z-index: -99;
+    opacity: 0;
+    position: absolute;
+    transform: rotateY(0deg) rotateX(180deg);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+  }
+  
+  .body-page .wrapper-login .login-with-social {
+    display: none;
+  }
+  
+  .body-page .wrapper-login .login-form,
+  .body-page .wrapper-login .login-with-social {
+    width: calc(100% - 20px);
+    height: 90%;
+    margin: 0 10px;
+    right: 0;
+    position: absolute;
+  }
+  
+  .body-page .wrapper-login .login-form .title-box {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 2.1em;
+    font-weight: 800;
+    text-align: left;
+    color: #58595b;
+    margin: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .body-page .wrapper-login .login-form .list-social-logins {
+    width: 90%;
+    height: 170px;
+    margin: 25px auto;
+  }
+  
+  .body-page .wrapper-login .login-form .list-social-logins .wrap-login-btn {
+    width: 185px;
+    height: 35px;
+    margin: 5px 0;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+  
+  .body-page .wrapper-login .login-form .list-social-logins .wrap-login-btn i {
+    font-size: 1.8em;
+    margin: 8px 10px;
+  }
+  
+  .body-page .wrapper-login .login-form .list-social-logins .wrap-login-btn span {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3em;
+  }
+  
+  .body-page .wrapper-login .login-form .wrap-input {
+    width: 90%;
+    height: 70px;
+    margin: 10px auto;
+  }
+  
+  .body-page .wrapper-login .login-form .wrap-input label {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3em;
+    color: #58595b;
+    margin: 5px 0;
+    display: block;
+  }
+  
+  .body-page .wrapper-login .login-form .wrap-input .ipt-style {
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #58595b;
+    outline: none;
+    opacity: .5;
+  }
+  
+  .body-page .wrapper-login .login-form .wrap-input button {
+    background: none;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+  }
+  
+  .body-page .wrapper-login .wrap-benefits {
+    width: 790px;
+    height: 290px;
+    right: 0;
+    bottom: -295px;
+    background: #e5e8ed;
+    position: absolute;
+  }
+  
+  .body-page .wrapper-login .wrap-benefits .title-box {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 2.1em;
+    font-weight: 800;
+    text-align: left;
+    margin: 15px;
+  }
+  
+  .body-page .wrapper-login .wrap-benefits .list-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    height: 70%;
+    margin: auto;
+  }
+  
+  .body-page .wrapper-login .wrap-benefits .list-benefits .benefit {
+    width: calc(100% / 2 - 20px);
+    height: calc(100% / 2 - 20px);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6em;
+    text-align: left;
+    margin: 10px auto;
+    position: relative;
+  }
+  
+  .body-page .wrapper-login .wrap-benefits .list-benefits .benefit i {
+    position: absolute;
+    top: 20px;
+  }
+  
+  .body-page .wrapper-login .wrap-benefits .list-benefits .benefit span,
+  .body-page .wrapper-login .wrap-benefits .list-benefits .benefit strong {
+    width: calc(100% - 40px);
+    font-weight: 700;
+    color: #7e7e7e;
+    display: block;
+    top: 20px;
+    left: 35px;
+    position: absolute;
+  }
+  
+  .body-page .wrapper-login .wrap-benefits .list-benefits .benefit span {
+    font-weight: 100;
+    top: 55px;
+  }
+  
+  /* Login active */
+  .body-page .active-box {
+    opacity: 1;
+    transform: rotateY(0deg) rotateX(0deg);
+    z-index: 999;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+  }
+  
+  /* Cover */
+  .body-page .cover-page {
+    background: url('https://images-na.ssl-images-amazon.com/images/I/A1dF3y4zGcL._RI_.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    opacity: .9;
+  }
+  
+  .body-page .cover-page:after {
+    content: '';
+    background: #000000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .6;
+  }
+  
+  .body-page .wrap-links-top {
+    width: 250px;
+    height: 60px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    z-index: 9;
+    position: absolute;
+  }
+  
+  .body-page .wrap-links-top .link-menu {
+    background: none;
+    width: calc(100% / 2 - 20px);
+    height: 35px;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: .2s linear;
+    transition-delay: .1s;
+  }
+  
+  .body-page .wrap-links-top .link-menu:hover {
+    transition: .2s linear;
+    transition-delay: .1s;
+    background: #EDC612;
+    border: 1px solid #EDC612;
+    border-radius: 5px;
+  }
+  
+  .body-page .wrap-links-top .link-menu .icon {
+    font-size: 1.6em;
+    color: #ffffff;
+    margin: auto 5px;
+  }
+  
+  .body-page .wrap-links-top .link-menu .link {
+    font-size: 1.6em;
+    color: #ffffff;
+  }
+  
+  .body-page .header-page {
+    width: calc(100% - 150px);
+    height: 150px;
+    top: 100px;
+    margin: 25px auto;
+    z-index: 9;
+    position: relative;
+  }
+  
+  .body-page .header-page:after {
+    content: '';
+    background: #ffffff;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+    opacity: .5;
+    position: absolute;
+  }
+  
+  .body-page .header-page .btn-more {
+    width: 90px;
+    height: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4em;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    bottom: -80px;
+    left: calc(100% / 2 - 45px);
+    position: absolute;
+  }
+  
+  .body-page .header-page .cat-tv {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 5px auto;
+    display: block;
+    color: #ffffff;
+  }
+  
+  .body-page .header-page .main-title {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 5.6em;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 15px auto;
+    display: block;
+  }
+  
+  .body-page .header-page .wrap-infos {
+    width: 75%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .body-page .header-page .wrap-infos .info-item {
+    font-size: 1.4em;
+    color: #ffffff;
+    margin: auto 5px;
+    padding: 0 8px;
+    border-right: 1px solid #ffffff;
+  }
+  
+  .body-page .header-page .wrap-infos .info-item:last-child {
+    border: none;
+  }
+  
+  .body-page .header-page .wrap-infos .rate {
+    background: green;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: none;
+    padding: 0;
+    text-align: center;
+    line-height: 2.5;
+  }
+  
+  .body-page .body-page {
+    @extend .header-page;
+    height: 220px;
+    top: 200px;
+    display: flex;
+    &:after {
+      content: none;
+    }
+  }
+  
+  /* Left Sidebar */
+  .body-page .aside-left {
+    width: calc(100% / 2 - 5px);
+    position: relative;
+  }
+  
+  /* Thumb */
+  .body-page .aside-left .thumb-serie {
+    width: 140px;
+    margin: 5px 0;
+  }
+  
+  .body-page .aside-left .excerpt {
+    width: 58%;
+    position: absolute;
+    left: 160px;
+    top: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.8em;
+    line-height: 1.8;
+    color: #ffffff;
+  }
+  
+  /* Tags */
+  .body-page .aside-left .wrap-tags {
+    @extend .excerpt;
+    height: 35px;
+    top: auto;
+    bottom: 10px;
+    display: flex;
+    font-size: inherit;
+  }
+  
+  /* Tag button */
+  .body-page .aside-left .wrap-tags .btn-tag {
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+    margin: auto 3px;
+    padding: 0px 25px;
+    cursor: pointer;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 100;
+    text-transform: lowercase;
+  }
+  
+  /* Right Sidebar */
+  .body-page .aside-right {
+    @extend .aside-left;
+    display: flex;
+  }
+  
+  /* Rating */
+  .body-page .aside-right .rating-progress {
+    width: 175px;
+    height: 175px;
+    margin: 10px 15px;
+    border: 3px solid #ffffff;
+    border-radius: 100%;
+  }
+  
+  .body-page .aside-right .rating-progress .rate-text {
+    font-size: 8.2em;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    line-height: 2.2;
+    display: block;
+  }
+  
+  /* Rating Sites */
+  .body-page .aside-right .menu-rating-site {
+    width: 220px;
+    height: 190px;
+    margin-left: 50px;
+  }
+  
+  /* Rate Sites */
+  .body-page .aside-right .menu-rating-site .rate-site {
+    width: 100%;
+    height: 60px;
+    margin: 2px auto;
+    cursor: pointer;
+  }
+  
+  .body-page .aside-right .menu-rating-site .rate-site .rate {
+    display: block;
+    margin: 8px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  body .aside-right .menu-rating-site .rate-site progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    display: block;
+    -webkit-appearance: none;
+  }
+  
+  body .aside-right .menu-rating-site .rate-site progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, .4);
+    border-radius: 5px;
+  }
+  
+  body .aside-right .menu-rating-site .rate-site progress::-webkit-progress-value {
+    background: yellow;
+    border-radius: 5px;
+  }
+  
