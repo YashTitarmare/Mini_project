@@ -41,10 +41,8 @@ class Birthday(db.Model):
 
 class MovieAlert(db.Model):
     __tablename__ = 'movies'
-
     id = db.Column(db.Integer, primary_key=True)
     movie_name = db.Column(db.String(100), nullable=False)
     release_date = db.Column(db.Date, nullable=False)
     alert_sent = db.Column(db.Boolean, default=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)  # Foreign key for user association
-    
