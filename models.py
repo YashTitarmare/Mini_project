@@ -29,15 +29,12 @@ class Birthday(db.Model):
     subject = db.Column(db.String(200), nullable=True)
     message = db.Column(db.String(200), nullable=True)
     email = db.Column(db.String(50), nullable=False)
-    user_email = db.Column(db.String(100), nullable=True)  # New column
-    user_password = db.Column(db.String(200), nullable=True)  # New column
+    user_email = db.Column(db.String(100), nullable=True)  
     
-    # Add the user_id column with a foreign key constraint
+    
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-    # Define the relationship with the User model
     user = db.relationship('User', backref=db.backref('birthdays', lazy=True))
-  # Foreign key for user association
 
 class MovieAlert(db.Model):
     __tablename__ = 'movies'
