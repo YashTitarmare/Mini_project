@@ -36,10 +36,15 @@ def register():
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
+        # task to add one more User filed  and get data 
 
         # checking the user  already exists or not first to extute the first statment after  this  is true 
-
-        if User.query.filter((User.username == username) | (User.email == email)).first():
+                             # Here .username is for User modle 
+        if User.query.filter((User.username == username) | (User.email == email)).first():  
+            """ 
+            first() is  
+            
+            """
             flash('Username or Email already exists!', 'danger')
             return redirect(url_for('register'))  # Redirect to register if user exists
 
@@ -47,17 +52,16 @@ def register():
         new_user = User(username=username, email=email, password=password)
         try:  # erro handing
             db.session.add(new_user)
-            db.session.commit()
+            db.session.commit()   # after the pocess is complete the commit and experied this session
             flash('Registration successful! Please login.', 'success')
             return redirect(url_for('login'))  
         except Exception as e:  # excepted erro
-            db.session.rollback()    # roll back when the email or password is word 
+            db.session.rollback() # rollback the cureent   secsseion to back    
+
                                 # if not give this the exit the seation 
             flash(f"Error: {str(e)}", "danger")
             return redirect(url_for('register')) 
     return render_template('register.html')
-
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -85,10 +89,62 @@ def logout():
 
 
 # Protect routes using a custom decorator
+
+
+
+
+
 from functools import wraps  #  its use 
 
+
+#Example of the wrapper how its use and why 
+# In the give if we create the only say_hello funtion its only print "Hello " 
+# but now wrapper with adding extra behavior to this like before call message and after call message 
+"""           
+Example of the wrapper how its use and why 
+
+def wrapper_function(original_function):
+    def new_function():
+        print("Before the function runs")  # Extra behavior
+        original_function()  # Call the actual function
+        print("After the function runs")   # Extra behavior
+    return new_function
+
+def say_hello():
+    print("Hello!")
+
+# Apply the wrapper manually
+wrapped_hello = wrapper_function(say_hello)
+wrapped_hello()
+
+
+
+Using a Decorator for Simplicity  
+
+
+def my_decorator(func):
+    def wrapper():
+        print("Before function")
+        func()
+        print("After function")
+    return wrapper
+
+@my_decorator  # This automatically applies the wrapper
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+
+
+
+
+
+"""
+
+
 def login_required(f):
-    @wraps(f)
+    @wraps(f)      
     def decorated_function(*args, **kwargs):
         if 'user_id' not in session:
             flash('Please log in to access this page.', 'warning')
