@@ -134,15 +134,9 @@ def say_hello():
     print("Hello!")
 
 say_hello()
-
-
-
-
-
-
 """
 
-
+# understand ? 26-02-2025
 def login_required(f):
     @wraps(f)      
     def decorated_function(*args, **kwargs):
@@ -152,8 +146,15 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+#################################End ##############################
+
+
+
+
+
+
 @app.route('/dashboard')
-@login_required
+@login_required   # applying the decorator in the login for dashboard for checking condtion  before function call (that is use  of the warper)
 def dashboard():
      
         username = session.get('username')  
