@@ -8,8 +8,8 @@ logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
 from flask import Flask, render_template,request,redirect,url_for,flash,session
 from flask_sqlalchemy import SQLAlchemy
-from config import Config
-from models import db, Task, Birthday, MovieAlert,User
+from config import Config  # user define model of name config  wiht class Config
+from models import db, Task, Birthday, MovieAlert,User # user define model of name models wiht  multiples class and varible
 
 #from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -37,7 +37,7 @@ def register():
         email = request.form['email']
         password = request.form['password']
 
-        # checking the user  already exists or not first to extute the first statment adter this  is true 
+        # checking the user  already exists or not first to extute the first statment after  this  is true 
 
         if User.query.filter((User.username == username) | (User.email == email)).first():
             flash('Username or Email already exists!', 'danger')
@@ -67,7 +67,7 @@ def login():
 
         user = User.query.filter_by(username=username).first()
         if user and (user.password, password):
-            session['user_id'] = user.id  ############
+            session['user_id'] = user.id  # checking in the session user_id wiht database id filter by username ?
             session['username'] = user.username
             flash('Login successful!', 'success')
             return redirect(url_for('dashboard'))
